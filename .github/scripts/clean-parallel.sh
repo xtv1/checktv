@@ -1,82 +1,78 @@
 #!/bin/bash
 set -euo pipefail
 
+UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/128.0 Safari/537.36"
+
 ORIGINAL="list.txt"
-BACKUP="list.txt.bak.$(date +%Y%m%d)"
-VALID_FILE="/tmp/valid.txt"
-REMOVED_FILE="/tmp/removed.txt"
-REMOVED_COUNT="/tmp/removed_count"
+VALID="/tmp/valid.txt"
+REMOVED="/tmp/removed.txt"
+DEBUG="artifacts/debug_$(date +%Y%m%d).log"
+mkdir -p artifacts
+> "$VALID" > "$REMOVED" > "$DEBUG"
+echo "0" > /tmp/removed_count
 
-cp "$ORIGINAL" "$BACKUP"           # 备份原始文件
-> "$VALID_FILE"
-> "$REMOVED_FILE"
-echo "0" > "$REMOVED_COUNT"
+TMP="/tmp/to_check.txt"
+> "$TMP"
 
-# 临时文件：每行格式 "url|||name|||original_line"
-TMP_INPUT="/tmp/streams_to_check.txt"
-> "$TMP_INPUT"
-
-echo "正在解析直播源列表..."
+echo "正在智能解析 live_ipv4.txt（支持 $ 分隔）..." | tee -a "$DEBUG"
 while IFS= read -r line || [[ -n "$line" ]]; do
   [[ -z "$line" ]] && continue
-  [[ "$line" =~ ^# ]] && { echo "$line" >> "$VALID_FILE"; continue; }  # 保留注释
+  [[ $line == \#* ]] && { echo "$line" >> "$VALID"; continue; }
 
-  url=$(echo "$line" | cut -d',' -f1)
-  name=$(echo "$line" | cut -d',' -f2-)
-  echo "$url|||${name:-未知频道}|||$(echo "$line" | sed 's/|/PIPE/g')" >> "$TMP_INPUT"
+  # 精准提取第一个 http/https/rtmp/rtsp 链接
+  if [[ $line =~ (https?://[^[:space:]]+|rtmp://[^[:space:]]+|rtsp://[^[:space:]]+) ]]; then
+    url="${BASH_REMATCH[1]}"
+    name="${line%%"$url"*}"
+    name="${name%%,*}" ; name="${name%%\$*}" ; name=$(echo "$name" | xargs)  # trim
+    [[ -z "$name" ]] && name="未知频道$(echo $url | md5sum | cut -c1-6)"
+    echo "$url|||${name:-未知}|||$(echo "$line" | sed 's/|/PIPE/g')" >> "$TMP"
+  fi
 done < "$ORIGINAL"
 
-TOTAL=$(wc -l < "$TMP_INPUT")
-echo "共发现 $TOTAL 条待检测源，开始并行检测（最高 50 线程）..."
+TOTAL=$(wc -l < "$TMP")
+echo "共 $TOTAL 条待检测，开始 30 线程检测（已伪装浏览器 UA）..." | tee -a "$DEBUG"
 
-# 核心：并行检测函数
 check_stream() {
-  local line="$1"
-  local url=$(echo "$line" | cut -d'|' -f1 -d'|')
-  local name=$(echo "$line" | cut -d'|' -f4- -d'|' | sed 's/PIPE/|/g')  # 还原原始行
+  local url="$1"
+  local name="$2"
+  local orig="$3"
 
-  if timeout 25 ffprobe -v error -select_streams v:0 \
-      -show_entries stream=width,height,duration \
-      -of csv=p=0 "$url" 2>/dev/null | grep -q ",N/A$"; then
-    echo "OK|$line"
-  else
-    if timeout 20 ffmpeg -i "$url" -t 1 -f null /dev/null -y 2>/dev/null; then
-      echo "OK|$line"   # 极少数特殊流 ffprobe 判不出，但 ffmpeg 能连上
-    else
-      echo "FAIL|$line"
-    fi
+  # 第一步：快速连通性测试（带 UA）
+  if timeout 15 ffmpeg -user_agent "$UA" -i "$url" -t 4 -f null - -y >/dev/null 2>&1; then
+    echo "OK|$orig"
+    return
   fi
+
+  # 第二步：再给一次机会，用 ffprobe 详细检查（很多源 ffmpeg 连不上但 ffprobe 能）
+  if timeout 30 ffprobe -user_agent "$UA" -v error -select_streams v:0 \
+      -show_entries stream=width,height -of csv=p=0 "$url" 2>/dev/null | grep -qE '^[0-9]+,[0-9]+$'; then
+    echo "OK|$orig"
+    return
+  fi
+
+  echo "FAIL|$orig"
 }
 
 export -f check_stream
-export VALID_FILE REMOVED_FILE REMOVED_COUNT
+export UA
 
-# 并行执行！50 线程 + 进度条
-cat "$TMP_INPUT" | \
-  parallel -j 50 --bar --line-buffer \
-  check_stream {} | \
-  while IFS= read -r result; do
-    status=$(echo "$result" | cut -d'|' -f1)
-    original_line=$(echo "$result" | cut -d'|' -f5- | sed 's/PIPE/|/g')
+cat "$TMP" | parallel -j 30 --bar --line-buffer \
+  'line={}; url=$(echo $line|cut -d"|" -f1); name=$(echo $line|cut -d"|" -f2); orig=$(echo $line|cut -d"|" -f4- | sed "s/PIPE/|/g"); check_stream "$url" "$name" "$orig"' | \
+while IFS= read -r res; do
+  if [[ $res == OK* ]]; then
+    echo "${res#OK|}" >> "$VALID"
+  else
+    echo "${res#FAIL|}" >> "$REMOVED"
+    count=$(cat /tmp/removed_count)
+    echo $((count+1)) > /tmp/removed_count
+  fi
+done
 
-    if [[ "$status" == "OK" ]]; then
-      echo "$original_line" >> "$VALID_FILE"
-    else
-      echo "$original_line" >> "$REMOVED_FILE"
-      echo "$original_line" >> "$REMOVED_FILE"
-      count=$(cat "$REMOVED_COUNT")
-      echo $((count + 1)) > "$REMOVED_COUNT"
-    fi
-  done
+mv "$VALID" "$ORIGINAL"
+REMOVED=$(cat /tmp/removed_count)
 
-# 最终替换
-mv "$VALID_FILE" "$ORIGINAL"
+echo "==========================================" | tee -a "$DEBUG"
+echo "检测完毕！共 $TOTAL 条，剔除 $REMOVED 条失效源（保留 $(($TOTAL - $REMOVED)) 条）" | tee -a "$DEBUG"
+cp "$REMOVED" "artifacts/removed_$(date +%Y%m%d).txt"
 
-REMOVED=$(cat "$REMOVED_COUNT")
-echo "=========================================="
-echo "多线程检测完成！共 $TOTAL 条，剔除 $REMOVED 条失效源"
-echo "新 list.txt 已生成（仅保留有效源）"
-echo "被移除的源已保存到 artifacts/removed_$(date +%F).txt"
-
-mkdir -p artifacts
-cp "$REMOVED_FILE" "artifacts/removed_$(date +%F).txt"
+echo "干净的 list.txt 已生成！被移除的源已打包为 artifact" | tee -a "$DEBUG"
