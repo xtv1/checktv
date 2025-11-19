@@ -20,7 +20,7 @@ jobs:
           install-parallel: true   # 关键：自动安装 parallel
 
       - name: Download latest list
-        run: curl -L -o list.txt https://raw.githubusercontent.com/gaotianliuyun/gao/refs/heads/master/list.txt
+        run: curl -L -o list.txt https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/live_ipv4.txt
 
       - name: Parallel Clean Invalid Streams
         run: bash .github/scripts/clean-parallel.sh
