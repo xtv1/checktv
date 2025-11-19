@@ -1,54 +1,51 @@
-name: Daily Clean Invalid Live Streams (Parallel)
+name: Daily Clean IPV4 Live Streams (终极版)
 
 on:
   schedule:
-    - cron: '0 8 * * *'          # 每天 UTC 8:00 → 北京时间 16:00
-  workflow_dispatch:             # 支持手动触发
+    - cron: '0 8 * * *'          # 北京时间 16:00 每天一次
+  workflow_dispatch:
 
 jobs:
   clean:
     runs-on: ubuntu-latest
     permissions:
-      contents: write              # 允许自动提交
+      contents: write
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Install FFmpeg + GNU Parallel
+      - name: Install FFmpeg + Parallel
         uses: AnimMouse/setup-ffmpeg@v1
         with:
-          install-parallel: true     # 自动安装 parallel 工具
+          install-parallel: true
 
-      - name: Download latest source list
+      - name: Download latest IPV4 list
         run: |
           curl -L -o list.txt \
             https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/live_ipv4.txt
 
-      - name: Make clean script executable        # 关键一步：自动加执行权限
-        run: chmod +x .github/scripts/clean-parallel.sh
+      - name: Make script executable
+        run: chmod +x .github/scripts/clean-ultimate.sh
 
-      - name: Run parallel cleaning script
-        run: bash .github/scripts/clean-parallel.sh
+      - name: Run ultimate cleaning script
+        run: bash .github/scripts/clean-ultimate.sh
 
-      - name: Commit & push new clean list.txt
+      - name: Commit & push if changed
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          
+          git config user.email "actions[bot]@github.com"
           if git diff --quiet list.txt; then
-            echo "Today no dead links, nothing to commit"
+            echo "Today all streams are alive!"
           else
-            removed=$(cat /tmp/removed_count || echo "0")
+            removed=$(cat /tmp/removed_count || echo 0)
             git add list.txt
-            git commit -m "Auto clean: removed $removed dead streams [$(date +'%F')]"
+            git commit -m "Auto clean: removed $removed dead links [$(date +'%F')]"
             git push
-            echo "New clean list.txt has been pushed! (removed $removed dead links)"
+            echo "Pushed new clean list.txt"
           fi
 
-      - name: Upload removed list as artifact      # 方便你随时下载查看被删了哪些
-        if: always()
+      - name: Upload removed list
         uses: actions/upload-artifact@v4
         with:
-          name: removed-streams-${{ github.run_date }}
+          name: removed-${{ github.run_date }}
           path: artifacts/removed_*.txt
