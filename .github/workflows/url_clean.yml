@@ -1,4 +1,4 @@
-name: Daily Clean Invalid Live Streams (Parallel)
+name: Clean Invalid Live Streams (Parallel)
 
 on:
   schedule:
