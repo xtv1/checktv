@@ -1,0 +1,40 @@
+name: Daily Clean Invalid Live Streams (Parallel)
+
+on:
+  schedule:
+    - cron: '0 8 * * *'      # 北京时间 16:00，每天一次
+  workflow_dispatch:
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install FFmpeg + GNU Parallel
+        uses: AnimMouse/setup-ffmpeg@v1
+        with:
+          install-parallel: true   # 关键：自动安装 parallel
+
+      - name: Download latest list
+        run: curl -L -o list.txt https://raw.githubusercontent.com/gaotianliuyun/gao/refs/heads/master/list.txt
+
+      - name: Parallel Clean Invalid Streams
+        run: bash .github/scripts/clean-parallel.sh
+
+      - name: Commit & Push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet list.txt; then
+            echo "No invalid streams removed today"
+          else
+            removed=$(cat /tmp/removed_count)
+            git add list.txt
+            git commit -m "Auto clean: removed $removed invalid streams [$(date +'%F')]"
+            git push
+            echo "Pushed new clean list.txt (removed $removed dead links)"
+          fi
