@@ -1,14 +1,18 @@
-name: Check Live Streams
+name: Daily Live Stream Cleanup
 
 on:
+  schedule:
+    # 每天 UTC 02:00 自动执行（北京时间 10:00）
+    - cron: "0 2 * * *"
+
   workflow_dispatch:
     inputs:
       input_url:
         description: '原始直播源文件 URL'
         required: true
-        default: 'https://raw.githubusercontent.com/kimwang1978/collect-txt/refs/heads/main/%E4%B8%93%E5%8C%BA/%E2%99%AA%E4%BC%98%E8%B4%A8%E5%8D%AB%E8%A7%86.txt'
+        default: 'https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/live_ipv4.txt'
       output_path:
-        description: '清理后输出到仓库根目录的文件名'
+        description: '清理后输出文件名（保存在仓库根目录）'
         required: true
         default: 'cleaned_playlist.txt'
       http_concurrency:
@@ -26,12 +30,34 @@ jobs:
     timeout-minutes: 120
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           persist-credentials: true
 
-      - name: Install apt deps (ffmpeg)
+      # ----------------------
+      # 获取 input_url & output_path
+      # 对于 cron 情况：使用默认值
+      # ----------------------
+      - name: Set defaults for cron event
+        id: vars
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "url=https://raw.githubusercontent.com/kimwang1978/collect-txt/refs/heads/main/%E4%B8%93%E5%8C%BA/%E2%99%AA%E4%BC%98%E8%B4%A8%E5%8D%AB%E8%A7%86.txt" >> $GITHUB_OUTPUT
+            echo "output=cleaned_playlist.txt" >> $GITHUB_OUTPUT
+            echo "http_con=200" >> $GITHUB_OUTPUT
+            echo "ffprobe_con=40" >> $GITHUB_OUTPUT
+          else
+            echo "url=${{ github.event.inputs.input_url }}" >> $GITHUB_OUTPUT
+            echo "output=${{ github.event.inputs.output_path }}" >> $GITHUB_OUTPUT
+            echo "http_con=${{ github.event.inputs.http_concurrency }}" >> $GITHUB_OUTPUT
+            echo "ffprobe_con=${{ github.event.inputs.ffprobe_concurrency }}" >> $GITHUB_OUTPUT
+          fi
+
+      # ----------------------
+      # Install dependencies
+      # ----------------------
+      - name: Install ffmpeg
         run: |
           sudo apt-get update
           sudo apt-get install -y ffmpeg
@@ -46,40 +72,53 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # ----------------------
+      # Download input playlist
+      # ----------------------
       - name: Download input file
         run: |
-          curl -fsSL "${{ github.event.inputs.input_url }}" -o /tmp/input_playlist.txt
+          curl -fsSL "${{ steps.vars.outputs.url }}" -o /tmp/input_playlist.txt
+          echo "Input file downloaded."
 
+      # ----------------------
+      # Run the stream checker
+      # ----------------------
       - name: Run stream checker
         run: |
           python scripts/check_streams.py \
             --input /tmp/input_playlist.txt \
-            --output "${{ github.event.inputs.output_path }}" \
-            --http-concurrency ${{ github.event.inputs.http_concurrency }} \
-            --ffprobe-concurrency ${{ github.event.inputs.ffprobe_concurrency }} \
+            --output "${{ steps.vars.outputs.output }}" \
+            --http-concurrency ${{ steps.vars.outputs.http_con }} \
+            --ffprobe-concurrency ${{ steps.vars.outputs.ffprobe_con }} \
             --report "stream_report.json"
 
-      - name: Commit & Push cleaned file to repo root
+      # ----------------------
+      # Commit & Push updated cleaned file
+      # ----------------------
+      - name: Commit and Push to Repo Root
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "github-actions"
 
-          git add "${{ github.event.inputs.output_path }}" stream_report.json || true
+          git add "${{ steps.vars.outputs.output }}" stream_report.json || true
 
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Auto update cleaned playlist: ${{ github.event.inputs.output_path }}"
+            git commit -m "Daily auto-cleaned live playlist update"
             git push
           fi
 
-      - name: Upload cleaned file as artifact
+      # ----------------------
+      # Upload artifacts
+      # ----------------------
+      - name: Upload cleaned file artifact
         uses: actions/upload-artifact@v4
         with:
           name: cleaned-playlist
-          path: ${{ github.event.inputs.output_path }}
+          path: ${{ steps.vars.outputs.output }}
 
-      - name: Upload report
+      - name: Upload report artifact
         uses: actions/upload-artifact@v4
         with:
           name: stream-report
