@@ -1,4 +1,4 @@
-name: Daily Clean 10万条直播源（保留分组）
+name: Daily Clean（保留分组）
 
 on:
   schedule:
