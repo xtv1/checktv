@@ -23,7 +23,7 @@ jobs:
       - name: 下载最新源文件
         run: |
           curl -L -o raw.txt \
-            https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/live_ipv4.txt
+            https://raw.githubusercontent.com/gaotianliuyun/gao/refs/heads/master/list.txt
 
       - name: 执行万条级清洗脚本
         run: |
