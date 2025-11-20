@@ -1,0 +1,73 @@
+# File: .github/workflows/check_streams.yml
+name: Check Live Streams
+
+on:
+  workflow_dispatch:
+    inputs:
+      input_url:
+        description: '原始直播源文件 URL（raw github 或 http 链接）'
+        required: true
+        default: 'https://raw.githubusercontent.com/kimwang1978/collect-txt/refs/heads/main/%E4%B8%93%E5%8C%BA/%E2%99%AA%E4%BC%98%E8%B4%A8%E5%8D%AB%E8%A7%86.txt'
+      output_path:
+        description: '输出文件路径'
+        required: true
+        default: 'cleaned_playlist.txt'
+      http_concurrency:
+        description: 'HTTP 并发（注意 runner 限制）'
+        required: false
+        default: '200'
+      ffprobe_concurrency:
+        description: 'ffprobe 并发（务必不要设太高）'
+        required: false
+        default: '40'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install apt deps (ffmpeg)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install pip deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Download input file
+        run: |
+          echo "Downloading ${{ github.event.inputs.input_url }}"
+          curl -fsSL "${{ github.event.inputs.input_url }}" -o /tmp/input_playlist.txt
+
+      - name: Run stream checker
+        env:
+          INPUT: /tmp/input_playlist.txt
+        run: |
+          python scripts/check_streams.py \
+            --input /tmp/input_playlist.txt \
+            --output "${{ github.event.inputs.output_path }}" \
+            --http-concurrency ${{ github.event.inputs.http_concurrency }} \
+            --ffprobe-concurrency ${{ github.event.inputs.ffprobe_concurrency }} \
+            --report "stream_report.json"
+
+      - name: Upload artifact (cleaned)
+        uses: actions/upload-artifact@v4
+        with:
+          name: cleaned-playlist
+          path: ${{ github.event.inputs.output_path }}
+
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: stream-report
+          path: stream_report.json
