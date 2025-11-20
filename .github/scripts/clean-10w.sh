@@ -7,27 +7,33 @@ FINAL="list.txt"
 mkdir -p artifacts
 echo "0" > /tmp/removed_count
 
-# 临时文件只存需要检测的行
+# 临时文件：存行号列表
 TO_CHECK="/tmp/to_check.txt"
 > "$TO_CHECK"
 
+# 临时文件：存原始检测行和URL（用简单文件而非数组，避免内存坑）
+CHECK_CONTENT="/tmp/check_content.txt"
+> "$CHECK_CONTENT"
+
 echo "正在读取原始文件并编号..."
 
-# 第一步：读取原始文件，记录所有含 URL 的行（带行号）
-declare -a check_lines   # 存需要检测的原始行
-declare -a check_urls    # 对应 URL
 lineno=0
-while IFS= read -r line || [[ -n "$line" ]]; do
-  ((lineno++))
-  if echo "$line" | grep -Eq 'https?://|rtmp://|rtsp://'; then
-    url=$(echo "$line" | grep -Eo 'https?://[^[:space:]]+|rtmp://[^[:space:]]+|rtsp://[^[:space:]]+' | head -n1)
-    check_lines+=("$line")
-    check_urls+=("$url")
-    echo "$lineno" >> "$TO_CHECK"
-  fi
+while read -r line; do
+  lineno=$((lineno + 1))
+
+  # 简单兼容的URL检查
+  case "$line" in
+    *http://*|*https://*|*rtmp://*|*rtsp://*)
+      url=$(echo "$line" | sed -n 's/.*\(http[s]*:\/\/[^ ]*\).*/\1/p' | head -n1)
+      if [ -n "$url" ]; then
+        echo "$lineno" >> "$TO_CHECK"
+        echo "$lineno|$url|$line" >> "$CHECK_CONTENT"
+      fi
+      ;;
+  esac
 done < "$RAW"
 
-TOTAL=${#check_urls[@]}
+TOTAL=$(wc -l < "$TO_CHECK" 2>/dev/null || echo 0)
 echo "发现 $TOTAL 条直播源，开始 40 线程检测..."
 
 # 检测函数（输出 0=有效 1=失效）
@@ -37,7 +43,7 @@ check_one() {
     echo "0"
   elif timeout 25 ffprobe -user_agent "$UA" -v error -select_streams v:0 \
        -show_entries stream=width,height -of csv=p=0 "$url" 2>/dev/null | \
-       grep -qE '^[0-9]+,[0-9]+$'; then
+       grep -qE '^[0-9]+,[0-9]+$' ; then
     echo "0"
   else
     echo "1"
@@ -46,31 +52,35 @@ check_one() {
 export -f check_one
 export UA
 
-# 并行检测（只输出 0 或 1）
-if (( TOTAL > 0 )); then
-  printf "%s\n" "${check_urls[@]}" | parallel -j 40 --bar check_one > /tmp/status.txt
+# 并行检测（简单 printf 喂 URL）
+if [ "$TOTAL" -gt 0 ]; then
+  grep -o '|[^|]*|' "$CHECK_CONTENT" | cut -d'|' -f2 | parallel -j 40 --bar check_one > /tmp/status.txt
 else
   > /tmp/status.txt
 fi
 
-# 第二步：最终重建文件（最稳方案）
+# 最终重建文件（简单循环，无数组）
 {
   check_idx=0
   lineno=0
-  while IFS= read -r line || [[ -n "$line" ]]; do
-    ((lineno++))
-    # 判断当前行是否在我们检测列表中
-    if (( check_idx < TOTAL )) && grep -q "^$lineno$" "$TO_CHECK"; then
-      status=$(sed -n "$((check_idx + 1))p" /tmp/status.txt)
+  while read -r line; do
+    lineno=$((lineno + 1))
+
+    # 检查是否是检测行
+    if grep -q "^$lineno$" "$TO_CHECK" 2>/dev/null; then
+      status=$(sed -n "$((check_idx + 1))p" /tmp/status.txt 2>/dev/null || echo "1")
+      check_line=$(sed -n "$((check_idx + 1))p" "$CHECK_CONTENT" 2>/dev/null || echo "")
+      orig_line=$(echo "$check_line" | cut -d'|' -f3-)
+
       if [ "$status" = "0" ]; then
-        echo "${check_lines[$check_idx]}"
+        echo "$orig_line"
       else
-        echo "${check_lines[$check_idx]}" >> "artifacts/removed_$(date +%Y%m%d_%H%M).txt"
-        echo $(( $(cat /tmp/removed_count) + 1 )) > /tmp/removed_count
+        echo "$orig_line" >> "artifacts/removed_$(date +%Y%m%d_%H%M).txt"
+        count=$(cat /tmp/removed_count)
+        echo $((count + 1)) > /tmp/removed_count
       fi
-      ((check_idx++))
+      check_idx=$((check_idx + 1))
     else
-      # 分组标题、空行、注释原样输出
       echo "$line"
     fi
   done < "$RAW"
