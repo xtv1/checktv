@@ -22,7 +22,7 @@ jobs:
       - name: Download latest IPV4 list
         run: |
           curl -L -o list.txt \
-            https://raw.githubusercontent.com/alantang1977/X/refs/heads/main/live/live_ipv4.txt
+            https://raw.githubusercontent.com/kimwang1978/collect-txt/refs/heads/main/%E4%B8%93%E5%8C%BA/%E2%99%AA%E4%BC%98%E8%B4%A8%E5%8D%AB%E8%A7%86.txt
 
       - name: Make script executable
         run: chmod +x .github/scripts/clean-ultimate.sh
