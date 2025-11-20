@@ -7,83 +7,78 @@ ORIGINAL="list.txt"
 VALID="/tmp/valid.txt"
 REMOVED="/tmp/removed.txt"
 DEBUG="artifacts/debug_$(date +%Y%m%d).log"
-RESULT_FILE="/tmp/parallel_results.txt"
+RESULT="/tmp/parallel_result.txt"
 
 mkdir -p artifacts
-> "$VALID" > "$REMOVED" > "$DEBUG" > "$RESULT_FILE"
+: > "$VALID" > "$REMOVED" > "$DEBUG" > "$RESULT"
 echo "0" > /tmp/removed_count
 
-# 1. 解析源（同之前）
-TMP="/tmp/to_check.txt"
-> "$TMP"
+TMP_INPUT="/tmp/input.txt"
+: > "$TMP_INPUT"
 
-echo "正在解析 live_ipv4.txt..." | tee -a "$DEBUG"
+echo "开始解析直播源..." | tee -a "$DEBUG"
 while IFS= read -r line || [[ -n "$line" ]]; do
   [[ -z "$line" ]] && continue
-  [[ $line == \#* ]] && { echo "$line" >> "$VALID"; continue; }
+  [[ "$line" == \#* ]] && { echo "$line" >> "$VALID"; continue; }
 
   if [[ $line =~ (https?://[^[:space:]]+|rtmp://[^[:space:]]+|rtsp://[^[:space:]]+) ]]; then
     url="${BASH_REMATCH[1]}"
-    name="${line%%"$url"*}"
-    name="${name%%,*}" ; name="${name%%\$*}" ; name=$(echo "$name" | xargs)
-    [[ -z "$name" ]] && name="未知$(echo $url | md5sum | cut -c1-6)"
-    echo "$url|||${name:-未知}|||$(echo "$line" | sed 's/|/PIPE/g')" >> "$TMP"
+    name="${line%%"$url"*}"; name="${name%%,*}"; name="${name%%\$*}"; name=$(echo "$name" | xargs)
+    [[ -z "$name" ]] && name="未命名"
+    echo -e "$url\t$name\t$line" >> "$TMP_INPUT"
   fi
 done < "$ORIGINAL"
 
-TOTAL=$(wc -l < "$TMP")
-echo "共 $TOTAL 条，开始防卡死并行检测（30 线程）..." | tee -a "$DEBUG"
+TOTAL=$(wc -l < "$TMP_INPUT")
+echo "共 $TOTAL 条，开始 30 线程检测（已加 User-Agent）..." | tee -a "$DEBUG"
 
-# 2. 核心检测函数（加 UA + 双保险）
-check_stream() {
+check_one() {
   local url="$1"
-  local orig="$3"
+  local line="$3"
 
-  # 第一招：ffmpeg 快速连通
+  # 1. ffmpeg 快速试播 4 秒
   if timeout 18 ffmpeg -user_agent "$UA" -i "$url" -t 4 -f null - -y >/dev/null 2>&1; then
-    echo "OK|$orig"
+    echo "OK|$line"
     return
   fi
 
-  # 第二招：ffprobe 检查视频流
+  # 2. ffprobe 检查是否有视频轨道
   if timeout 25 ffprobe -user_agent "$UA" -v error -select_streams v:0 \
-      -show_entries stream=width,height -of csv=p=0 "$url" 2>/dev/null | grep -qE '^[0-9]+,[0-9]+$'; then
-    echo "OK|$orig"
+      -show_entries stream=width,height -of csv=p=0 "$url" 2>/dev/null \
+      | grep -qE '^[0-9]+,[0-9]+$'; then
+    echo "OK|$line"
     return
   fi
 
-  echo "FAIL|$orig"
+  echo "FAIL|$line"
 }
-export -f check_stream
+export -f check_one
 export UA
 
-# 3. 关键防卡死写法（不使用管道！）
-#    --halt now,fail=1 一旦有子进程挂死立刻结束
-#    -a 指定输入文件
-#    --joblog 记录日志防止僵尸
-parallel -j 30 \
-  --bar \
-  --halt now,fail=1 \
-  --joblog /tmp/parallel_joblog.log \
-  -a "$TMP" \
-  check_stream {1} {2} {3} > "$RESULT_FILE"
+# 防卡死核心写法
+parallel -j 30 --bar --halt now,fail=1 --col-sep '\t' \
+  check_one {1} {2} {3} \
+  < "$TMP_INPUT" > "$RESULT"
 
-# 4. 处理结果（从文件读，绝不卡）
-while IFS= read -r res; do
-  if [[ $res == OK* ]]; then
-    echo "${res#OK|}" >> "$VALID"
+# 处理结果
+while IFS= read -r r; do
+  if [[ $r == OK* ]]; then
+    echo "${r#OK|}" >> "$VALID"
   else
-    echo "${res#FAIL|}" >> "$REMOVED"
-    count=$(cat /tmp/removed_count)
-    echo $((count+1)) > /tmp/removed_count
+    echo "${r#FAIL|}" >> "$REMOVED"
+    n=$(cat /tmp/removed_count)
+    echo $((n+1)) > /tmp/removed_count
   fi
-done < "$RESULT_FILE"
+done < "$RESULT"
 
+# 替换原文件
 mv "$VALID" "$ORIGINAL"
-REMOVED=$(cat /tmp/removed_count)
 
+REMOVED_COUNT=$(cat /tmp/removed_count)
 echo "==========================================" | tee -a "$DEBUG"
-echo "检测完成！共 $TOTAL 条，剔除 $REMOVED 条（保留 $(($TOTAL-$REMOVED)) 条）" | tee -a "$DEBUG"
+echo "检测完成！共 $TOTAL 条，剔除 $REMOVED_COUNT 条，保留 $((TOTAL - REMOVED_COUNT)) 条" | tee -a "$DEBUG"
+
+# 正确复制被移除列表（修复上一版的致命 bug）
 cp "$REMOVED" "artifacts/removed_$(date +%Y%m%d).txt"
 
-echo "防卡死版本运行成功！新 list.txt 已生成" | tee -a "$DEBUG"
+echo "干净的 list.txt 已生成，被移除列表已保存到 artifacts" | tee -a "$DEBUG"
