@@ -7,34 +7,31 @@ FINAL="list.txt"
 mkdir -p artifacts
 echo "0" > /tmp/removed_count
 
-# 临时文件：每行 "行号|||URL|||原始整行"
-TEMP_INPUT="/tmp/to_check.txt"
-> "$TEMP_INPUT"
+# 临时文件：格式 "行号|||URL|||原始行"
+TEMP="/tmp/check.txt"
+> "$TEMP"
 
-echo "正在读取原始文件并编号（保证顺序）..."
+echo "正在读取原始文件并编号..."
 
 lineno=0
 while IFS= read -r line || [[ -n "$line" ]]; do
   lineno=$((lineno + 1))
-
-  # 只处理包含 http/https/rtmp/rtsp 的行
   if echo "$line" | grep -Eq 'https?://|rtmp://|rtsp://'; then
     url=$(echo "$line" | grep -Eo 'https?://[^[:space:]]+|rtmp://[^[:space:]]+|rtsp://[^[:space:]]+' | head -n1)
-    printf "%05d|||%s|||%s\n" "$lineno" "$url" "$line" >> "$TEMP_INPUT"
+    printf "%d|||%s|||%s\n" "$lineno" "$url" "$line" >> "$TEMP"
   fi
 done < "$RAW"
 
-TOTAL=$(wc -l < "$TEMP_INPUT" 2>/dev/null || echo 0)
-echo "发现 $TOTAL 条待检测链接，开始 40 线程检测..."
+TOTAL=$(wc -l < "$TEMP")
+echo "发现 $TOTAL 条链接，开始 40 线程检测（顺序永不乱）..."
 
-# 检测函数：输出带行号的结果
 check() {
   local input="$1"
   local lineno=$(echo "$input" | cut -d'|' -f1)
   local url=$(echo "$input" | cut -d'|' -f4- | cut -d'|' -f1)
   local orig=$(echo "$input" | cut -d'|' -f7-)
 
-  if timeout 20 ffmpeg -user_agent "$UA" -i "$url" -t 4 -f null - -y > /dev/null 2>&1; then
+  if timeout 20 ffmpeg -user_agent "$UA" -i "$url" -t 4 -f null - -y >/dev/null 2>&1; then
     echo "$lineno|||OK|||$orig"
   elif timeout 25 ffprobe -user_agent "$UA" -v error -select_streams v:0 \
        -show_entries stream=width,height -of csv=p=0 "$url" 2>/dev/null | \
@@ -47,39 +44,36 @@ check() {
 export -f check
 export UA
 
-# 关键：用 -a 读文件 + --keep-order 强制顺序输出
 if [ "$TOTAL" -gt 0 ]; then
-  parallel --keep-order -j 40 --bar check :::: "$TEMP_INPUT" > /tmp/result.txt
+  parallel --keep-order -j 40 --bar check :::: "$TEMP" > /tmp/result.txt
 else
   > /tmp/result.txt
 fi
 
-# 最终重建文件（严格按原始顺序）
+# 精确重建文件（关键修复）
 {
-  current=0
+  lineno=0
   while IFS= read -r line || [[ -n "$line" ]]; do
-    current=$((current + 1))
+    lineno=$((lineno + 1))
 
-    # 检查这行是否在我们检测列表中
-    if grep -q "^${current}$" "$TEMP_INPUT" 2>/dev/null; then
-      result=$(grep "^${current}[^0-9]" /tmp/result.txt || echo "")
-      if [[ -n "$result" && "$result" == *OK* ]]; then
-        echo "$result" | cut -d'|' -f7-
+    # 精确匹配行号
+    result=$(grep "^${lineno}\\|" /tmp/result.txt || echo "")
+    if [ -n "$result" ]; then
+      status=$(echo "$result" | cut -d'|' -f4)
+      content=$(echo "$result" | cut -d'|' -f7-)
+      if [ "$status" = "OK" ]; then
+        echo "$content"
       else
-        # 失效的记录
-        if [[ -n "$result" ]]; then
-          echo "$result" | cut -d'|' -f7- >> "artifacts/removed_$(date +%Y%m%d_%H%M).txt"
-        fi
-        count=$(cat /tmp/removed_count)
-        echo $((count + 1)) > /tmp/removed_count
+        echo "$content" >> "artifacts/removed_$(date +%Y%m%d_%H%M).txt"
+        echo $(( $(cat /tmp/removed_count) + 1 )) > /tmp/removed_count
       fi
     else
-      # 分组标题、空行等原样输出
+      # 分组、标题、空行原样输出
       echo "$line"
     fi
   done < "$RAW"
 } > "$FINAL"
 
 echo "============================================"
-echo "清洗完成！共检测 $TOTAL 条，剔除 $(cat /tmp/removed_count) 条死链"
-echo "顺序 100% 原样保留 → list.txt 已生成"
+echo "清洗完成！共检测 $TOTAL 条，成功剔除 $(cat /tmp/removed_count) 条死链"
+echo "顺序 100% 原始，分组完美 → list.txt 已生成"
