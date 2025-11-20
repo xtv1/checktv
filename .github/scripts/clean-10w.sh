@@ -4,44 +4,41 @@ set -euo pipefail
 UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/128.0 Safari/537.36"
 RAW="raw.txt"
 FINAL="list.txt"
-VALID="/tmp/valid_lines"
-REMOVED="/tmp/removed_lines"
 RESULT="/tmp/parallel_result"
 mkdir -p artifacts
-> "$VALID" > "$REMOVED" > "$RESULT"
+> "$RESULT"
 echo "0" > /tmp/removed_count
 
-# 1. 按行读取，保留所有非URL行（分组、注释、空行）直接过
-#    只把包含 http/rtmp/rtsp 的行送去检测
-INPUT_LIST="/tmp/need_check.txt"
-> "$INPUT_LIST"
+# 关键修复：不再提前写分组！而是整行发给 parallel，检测完再原样输出
+INPUT="/tmp/all_lines_with_url.txt"
+> "$INPUT"
 
-echo "正在扫描分组与链接（支持10万条）..."
-while IFS= read -r line || [[ -n "$line" ]]; do
-  # 直接保留：分组标题、#EXTINF、注释、空行
-  if [[ "$line" == "#genre#"* ]] || [[ "$line" == "#EXTINF"* ]] || [[ "$line" == \#* ]] || [[ -z "$line" ]]; then
-    echo "$line" >> "$VALID"
+echo "正在逐行读取并保留原始顺序（支持10万条）..."
+
+# 第一遍：只提取包含URL的行，附带原始行内容（保持顺序）
+mapfile -t all_lines < "$RAW"
+for line in "${all_lines[@]}"; do
+  # 完全保留：空行、注释、分组标题、#EXTINF 等都不检测，直接待会原样输出
+  if ! [[ "$line" =~ (https?://|rtmp://|rtsp://) ]]; then
+    # 不是URL行 → 直接稍后输出（不参与检测）
     continue
   fi
 
-  # 提取URL（支持中间有空格、$ 等情况）
+  # 是URL行 → 提取第一个URL + 原始整行
   if [[ $line =~ (https?://[^[:space:]]+|rtmp://[^[:space:]]+|rtsp://[^[:space:]]+) ]]; then
     url="${BASH_REMATCH[1]}"
-    echo -e "$url\t$line" >> "$INPUT_LIST"
-  else
-    # 极少数异常行也保留
-    echo "$line" >> "$VALID"
+    printf '%s\t%s\n' "$url" "$line" >> "$INPUT"
   fi
-done < "$RAW"
+done
 
-TOTAL=$(wc -l < "$INPUT_LIST")
-echo "发现 $TOTAL 条链接，开始 40 线程高速检测（已加UA）..."
+TOTAL=$(wc -l < "$INPUT")
+echo "发现 $TOTAL 条待检测链接，开始40线程高速检测（顺序不变）..."
 
 check_url() {
   local url="$1"
   local orig_line="$2"
 
-  # 双保险检测（任意一个成功即为有效）
+  # 双保险检测
   if timeout 20 ffmpeg -user_agent "$UA" -i "$url" -t 4 -f null - -y >/dev/null 2>&1; then
     echo "OK|$orig_line"
     return
@@ -57,28 +54,40 @@ check_url() {
 export -f check_url
 export UA
 
-# 防卡死 + 高并发核心
+# 并行检测（只检测URL行）
 parallel -j 40 --bar --halt now,fail=1 --col-sep '\t' \
-  check_url {1} {2} < "$INPUT_LIST" > "$RESULT"
+  check_url {1} {2} < "$INPUT" > "$RESULT"
 
-# 分类写入
-while IFS= read -r r; do
-  if [[ $r == OK* ]]; then
-    echo "${r#OK|}" >> "$VALID"
-  else
-    echo "${r#FAIL|}" >> "$REMOVED"
-    n=$(cat /tmp/removed_count)
-    echo $((n+1)) > /tmp/removed_count
-  fi
-done < "$RESULT"
+# 第二遍：完整重建文件，保持原始顺序
+{
+  url_line_idx=0
+  for line in "${all_lines[@]}"; do
+    if ! [[ "$line" =~ (https?://|rtmp://|rtsp://) ]]; then
+      # 非URL行（分组、注释、空行）原样输出
+      echo "$line"
+      continue
+    fi
 
-mv "$VALID" "$FINAL"
-REMOVED_COUNT=$(cat /tmp/removed_count)
+    # 是URL行 → 从 parallel 结果中取第 url_line_idx 行的判断
+    result=$(sed -n "$((url_line_idx + 1))p" "$RESULT")
+    url_line_idx=$((url_line_idx + 1))
+
+    if [[ $result == OK* ]]; then
+      echo "${result#OK|}"
+    else
+      echo "#失效已删除: ${result#FAIL|}" >&2   # 写入被删除日志
+      (( $(cat /tmp/removed_count) + 1 )) > /tmp/removed_count
+    fi
+  done
+} > "$FINAL"
+
+# 记录被删除数量
+echo $(cat /tmp/removed_count) > /tmp/removed_count
 
 echo "============================================"
-echo "万条级清洗完成！"
-echo "总链接数: $TOTAL   剔除失效: $REMOVED_COUNT   保留 $(($TOTAL - $REMOVED_COUNT)) 条"
-echo "分组、标题、注释全部原样保留！"
-cp "$REMOVED" "artifacts/removed_$(date +%Y%m%d_%H%M).txt"
+echo "清洗完成！完全保留原始分组顺序"
+echo "总链接数: $TOTAL   剔除失效: $(cat /tmp/removed_count)   保留 $((TOTAL - $(cat /tmp/removed_count))) 条"
+echo "最终文件 → list.txt（分组丝毫不乱）"
 
-echo "最终干净源已写入 list.txt，即将自动提交！"
+# 保存被删除的原始行供审计
+grep "^FAIL|" "$RESULT" | cut -d'|' -f2- > "artifacts/removed_$(date +%Y%m%d_%H%M).txt"
