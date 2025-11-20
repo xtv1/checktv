@@ -34,15 +34,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "actions[bot]@github.com"
-          if git diff --quiet list.txt; then
-            echo "Today all streams are alive!"
-          else
+
             removed=$(cat /tmp/removed_count || echo 0)
             git add list.txt
             git commit -m "Auto clean: removed $removed dead links [$(date +'%F')]"
             git push
             echo "Pushed new clean list.txt"
-          fi
+
 
       - name: Upload removed list
         uses: actions/upload-artifact@v4
