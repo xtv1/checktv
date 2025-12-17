@@ -1,1073 +1,1073 @@
 [
   {
-    "url": "https://iptv.catvod.com/catvod.php?id=xjws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.0066093629999955,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=xjws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=cqws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.9689140119999706,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=cqws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=sxiws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.0052571820000367,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=sxiws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=xmws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.9977657430000022,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=xmws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=ynws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.010859761000006,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=ynws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=szws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.002342710999983,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=szws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=hinws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.9888535430000047,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=hinws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=ahws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.0102704899999821,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=ahws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=jlws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.9829800009999872,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=jlws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=jxws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.9949197430000254,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=jxws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=hljws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.8959262590000208,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=hljws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=sdws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.9690159440000343,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=sdws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=zjws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.9920112519999975,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=zjws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=dfws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.9180296989999874,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=dfws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=tjws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.011832606999974,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=tjws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=scws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.8200694100000305,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=scws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=dnws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.9800598310000055,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=dnws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=ssws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.8590759559999697,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=ssws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=gzws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.8073851099999843,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=gzws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=xzws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.8412677239999766,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=xzws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=lnws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.6980357869999807,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=lnws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=gsws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.6830492749999735,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=gsws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=hbws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.8576286750000008,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=hbws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=nmws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.9192732169999545,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=nmws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=btws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.9592103609999754,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=btws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=qhws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.9066390770000226,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=qhws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=gxws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.7652993949999995,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=gxws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=hnws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.9860487000000262,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=hnws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=nxws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.8318369929999676,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=nxws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=hubws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.7478927409999869,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=hubws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=bjws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.979033759999993,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=bjws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=gdws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.8164743910000425,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=gdws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=sxws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.9751646619999974,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=sxws: Invalid data found when processing input"
-  },
-  {
-    "url": "https://iptv.catvod.com/catvod.php?id=hunws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.8884818010000117,
-    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=hunws: Invalid data found when processing input"
-  },
-  {
-    "url": "http://api.kkitv.itv888.cn:8080/hls/iibq0absdjr/index.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.6631216589999553,
-    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/iibq0absdjr/index.m3u8: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://api.kkitv.itv888.cn:8080/hls/6gcdai13om5/index.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.0508280120000109,
-    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/6gcdai13om5/index.m3u8: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://api.kkitv.itv888.cn:8080/hls/p269fvbehye/index.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.7729047569999921,
-    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/p269fvbehye/index.m3u8: Server returned 404 Not Found"
-  },
-  {
     "url": "http://api.kkitv.itv888.cn:8080/hls/b6dl8yuvu/index.m3u",
     "alive": false,
     "method": "ffprobe",
-    "latency": 0.866120120000005,
+    "latency": 0.3195570059999966,
     "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/b6dl8yuvu/index.m3u: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://api.kkitv.itv888.cn:8080/hls/h5uud1z84gn/index.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.1785900309999988,
-    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/h5uud1z84gn/index.m3u8: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://api.kkitv.itv888.cn:8080/hls/qr6872071g/index.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.2561490169999843,
-    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/qr6872071g/index.m3u8: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://api.kkitv.itv888.cn:8080/hls/p2npnppn96p/index.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.246347036999964,
-    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/p2npnppn96p/index.m3u8: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://mg.hmysapp.cn:177/ckmg/zb.php?id=hubws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.6548831499999892,
-    "msg": "ffprobe-rc1:http://mg.hmysapp.cn:177/ckmg/zb.php?id=hubws: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://api.kkitv.itv888.cn:8080/hls/2a24lcvser/index.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.4829919409999661,
-    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/2a24lcvser/index.m3u8: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://mg.hmysapp.cn:177/ckmg/zb.php?id=jsws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.6673103169999877,
-    "msg": "ffprobe-rc1:http://mg.hmysapp.cn:177/ckmg/zb.php?id=jsws: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://api.kkitv.itv888.cn:8080/hls/z2lkdkrb4w/index.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.9777876150000111,
-    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/z2lkdkrb4w/index.m3u8: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://api.kkitv.itv888.cn:8080/hls/g1upm1u239/index.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.6696853909999732,
-    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/g1upm1u239/index.m3u8: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://api.kkitv.itv888.cn:8080/hls/m8hvytneunk/index.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.2649416449999649,
-    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/m8hvytneunk/index.m3u8: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://api.kkitv.itv888.cn:8080/hls/c1cajhsgba8/index.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.6593139750000319,
-    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/c1cajhsgba8/index.m3u8: Server returned 404 Not Found"
   },
   {
     "url": "http://api.kkitv.itv888.cn:8080/hls/qwummpaoaq/index.m3u8",
     "alive": false,
     "method": "ffprobe",
-    "latency": 0.7061745010000209,
+    "latency": 0.28777967399999227,
     "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/qwummpaoaq/index.m3u8: Server returned 404 Not Found"
   },
   {
-    "url": "http://api.kkitv.itv888.cn:8080/hls/pv0np60bpin/index.m3u8",
+    "url": "http://api.kkitv.itv888.cn:8080/hls/p2npnppn96p/index.m3u8",
     "alive": false,
     "method": "ffprobe",
-    "latency": 0.8530532819999621,
-    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/pv0np60bpin/index.m3u8: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://omnix.cn:4000/udp/225.1.8.45:8032",
-    "alive": true,
-    "method": "http-head",
-    "latency": 0.5902940400000034,
-    "msg": "HTTP GET 200"
-  },
-  {
-    "url": "http://api.kkitv.itv888.cn:8080/hls/yvz4ndj9dqb/index.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.863598622999973,
-    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/yvz4ndj9dqb/index.m3u8: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://api.kkitv.itv888.cn:8080/hls/hoxiunz7ce/index.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.7930040620000227,
-    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/hoxiunz7ce/index.m3u8: Server returned 404 Not Found"
+    "latency": 0.3259777879999888,
+    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/p2npnppn96p/index.m3u8: Server returned 404 Not Found"
   },
   {
     "url": "http://api.kkitv.itv888.cn:8080/hls/5dqtpf3arun/index.m3u8",
     "alive": false,
     "method": "ffprobe",
-    "latency": 0.8627083750000111,
+    "latency": 0.2767074990000111,
     "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/5dqtpf3arun/index.m3u8: Server returned 404 Not Found"
   },
   {
-    "url": "http://api.kkitv.itv888.cn:8080/hls/iftsd32ykm/index.m3u8",
+    "url": "http://api.kkitv.itv888.cn:8080/hls/z2lkdkrb4w/index.m3u8",
     "alive": false,
     "method": "ffprobe",
-    "latency": 1.521826620000013,
-    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/iftsd32ykm/index.m3u8: Server returned 404 Not Found"
+    "latency": 0.20785217899999964,
+    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/z2lkdkrb4w/index.m3u8: Server returned 404 Not Found"
   },
   {
-    "url": "http://api.kkitv.itv888.cn:8080/hls/ogh3s6tbw6/index.m3u8",
+    "url": "http://api.kkitv.itv888.cn:8080/hls/hoxiunz7ce/index.m3u8",
     "alive": false,
     "method": "ffprobe",
-    "latency": 1.2155508220000115,
-    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/ogh3s6tbw6/index.m3u8: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://api.kkitv.itv888.cn:8080/hls/jjt15bvbl7a/index.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.2305172080000375,
-    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/jjt15bvbl7a/index.m3u8: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://api.kkitv.itv888.cn:8080/hls/urjqjvyf41q/index.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.901454096000009,
-    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/urjqjvyf41q/index.m3u8: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-山东卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.1717049820000511,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-山东卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-深圳卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.1819470070000193,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-深圳卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-兵团卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.2097402499999816,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-兵团卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-重庆卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.2145496879999769,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-重庆卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-陕西卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.2307979679999903,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-陕西卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-北京卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.2679788809999764,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-北京卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-四川卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.2400231450000092,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-四川卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-湖北卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.1699238110000465,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-湖北卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-湖南卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.2476666480000063,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-湖南卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-吉林卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.3436241549999863,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-吉林卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-云南卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.295526510000002,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-云南卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-山西卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.0351280800000495,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-山西卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-甘肃卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.286454885000012,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-甘肃卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-广西卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.2994727900000385,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-广西卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-东南卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.260300782999991,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-东南卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-东方卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.2523280569999997,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-东方卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://www.745612.xyz:7788/rtp/235.254.198.72:1564",
-    "alive": true,
-    "method": "http-head",
-    "latency": 1.468068579999965,
-    "msg": "HTTP GET 200"
-  },
-  {
-    "url": "http://mg.hmysapp.cn:177/ckmg/zb.php?id=gdws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.6565845920000015,
-    "msg": "ffprobe-rc1:http://mg.hmysapp.cn:177/ckmg/zb.php?id=gdws: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-新疆卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.0455638980000117,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-新疆卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-海南卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.074795975000029,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-海南卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-辽宁卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.183057706999989,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-辽宁卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-宁夏卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.0503856480000309,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-宁夏卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-黑龙江卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.2046176379999451,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-黑龙江卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://mg.hmysapp.cn:177/ckmg/zb.php?id=jxws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.896205101000021,
-    "msg": "ffprobe-rc1:http://mg.hmysapp.cn:177/ckmg/zb.php?id=jxws: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-江苏卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.2586712190000071,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-江苏卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-贵州卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.0647435719999976,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-贵州卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-浙江卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.2705875400000082,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-浙江卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-青海卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.1517020869999897,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-青海卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-江西卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.3446102340000152,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-江西卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-内蒙古卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.3554103879999957,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-内蒙古卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-天津卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.3435547129999463,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-天津卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-河南卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.3787567530000047,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-河南卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-河北卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.2873648780000053,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-河北卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-广东卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.291091807999976,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-广东卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "https://httop.top/ysp-安徽卫视",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.1329941920000124,
-    "msg": "ffprobe-rc1:https://httop.top/ysp-安徽卫视: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://mg.hmysapp.cn:177/ckmg/zb.php?id=sxws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 0.8040475679999872,
-    "msg": "ffprobe-rc1:http://mg.hmysapp.cn:177/ckmg/zb.php?id=sxws: Server returned 404 Not Found"
-  },
-  {
-    "url": "http://gfr.x3322.net:9901/tsfile/live/1091_1.m3u8",
-    "alive": true,
-    "method": "http-head",
-    "latency": 4.945527145000028,
-    "msg": "HTTP HEAD 200"
-  },
-  {
-    "url": "http://gfr.x3322.net:9901/tsfile/live/1087_1.m3u8",
-    "alive": true,
-    "method": "http-head",
-    "latency": 4.948877401999994,
-    "msg": "HTTP HEAD 200"
-  },
-  {
-    "url": "http://gfr.x3322.net:9901/tsfile/live/1086_1.m3u8",
-    "alive": true,
-    "method": "http-head",
-    "latency": 4.943278376000023,
-    "msg": "HTTP HEAD 200"
-  },
-  {
-    "url": "http://gfr.x3322.net:9901/tsfile/live/1085_1.m3u8",
-    "alive": true,
-    "method": "http-head",
-    "latency": 4.949554906000003,
-    "msg": "HTTP HEAD 200"
+    "latency": 0.2184983780000067,
+    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/hoxiunz7ce/index.m3u8: Server returned 404 Not Found"
   },
   {
     "url": "http://gfr.x3322.net:9901/tsfile/live/1097_1.m3u8",
     "alive": true,
     "method": "http-head",
-    "latency": 4.944826286000023,
+    "latency": 1.2806472270000029,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://gfr.x3322.net:9901/tsfile/live/1091_1.m3u8",
+    "alive": true,
+    "method": "http-head",
+    "latency": 1.2844148840000003,
     "msg": "HTTP HEAD 200"
   },
   {
     "url": "http://gfr.x3322.net:9901/tsfile/live/1096_1.m3u8",
     "alive": true,
     "method": "http-head",
-    "latency": 4.945509052000034,
-    "msg": "HTTP HEAD 200"
-  },
-  {
-    "url": "http://gfr.x3322.net:9901/tsfile/live/1088_1.m3u8",
-    "alive": true,
-    "method": "http-head",
-    "latency": 4.9493080760000225,
-    "msg": "HTTP HEAD 200"
-  },
-  {
-    "url": "http://gfr.x3322.net:9901/tsfile/live/1094_1.m3u8",
-    "alive": true,
-    "method": "http-head",
-    "latency": 4.947108086000014,
-    "msg": "HTTP HEAD 200"
-  },
-  {
-    "url": "http://gfr.x3322.net:9901/tsfile/live/1098_1.m3u8",
-    "alive": true,
-    "method": "http-head",
-    "latency": 4.946231658999977,
-    "msg": "HTTP HEAD 200"
-  },
-  {
-    "url": "http://gfr.x3322.net:9901/tsfile/live/1092_1.m3u8",
-    "alive": true,
-    "method": "http-head",
-    "latency": 4.953335123999977,
-    "msg": "HTTP HEAD 200"
-  },
-  {
-    "url": "http://gfr.x3322.net:9901/tsfile/live/1100_1.m3u8",
-    "alive": true,
-    "method": "http-head",
-    "latency": 4.949073907000013,
+    "latency": 1.2837180620000055,
     "msg": "HTTP HEAD 200"
   },
   {
     "url": "http://gfr.x3322.net:9901/tsfile/live/1084_1.m3u8",
     "alive": true,
     "method": "http-head",
-    "latency": 4.946796264,
-    "msg": "HTTP HEAD 200"
-  },
-  {
-    "url": "http://gfr.x3322.net:9901/tsfile/live/1093_1.m3u8",
-    "alive": true,
-    "method": "http-head",
-    "latency": 4.954740759000003,
+    "latency": 1.278907376999996,
     "msg": "HTTP HEAD 200"
   },
   {
     "url": "http://gfr.x3322.net:9901/tsfile/live/1090_1.m3u8",
     "alive": true,
     "method": "http-head",
-    "latency": 4.958796402999951,
+    "latency": 1.287128444000004,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://gfr.x3322.net:9901/tsfile/live/1098_1.m3u8",
+    "alive": true,
+    "method": "http-head",
+    "latency": 1.2846443789999995,
     "msg": "HTTP HEAD 200"
   },
   {
     "url": "http://gfr.x3322.net:9901/tsfile/live/1095_1.m3u8",
     "alive": true,
     "method": "http-head",
-    "latency": 4.957975711000017,
+    "latency": 1.286306769999996,
     "msg": "HTTP HEAD 200"
   },
   {
-    "url": "http://mg.hmysapp.cn:177/ckmg/zb.php?id=dfws",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 1.1257025109999859,
-    "msg": "ffprobe-rc1:http://mg.hmysapp.cn:177/ckmg/zb.php?id=dfws: Server returned 404 Not Found"
+    "url": "http://gfr.x3322.net:9901/tsfile/live/1093_1.m3u8",
+    "alive": true,
+    "method": "http-head",
+    "latency": 1.2872270000000015,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://gfr.x3322.net:9901/tsfile/live/1088_1.m3u8",
+    "alive": true,
+    "method": "http-head",
+    "latency": 1.2905321029999897,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://gfr.x3322.net:9901/tsfile/live/1092_1.m3u8",
+    "alive": true,
+    "method": "http-head",
+    "latency": 1.2925156750000042,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://gfr.x3322.net:9901/tsfile/live/1086_1.m3u8",
+    "alive": true,
+    "method": "http-head",
+    "latency": 1.283727706999997,
+    "msg": "HTTP HEAD 200"
   },
   {
     "url": "http://gfr.x3322.net:9901/tsfile/live/1089_1.m3u8",
     "alive": true,
     "method": "http-head",
-    "latency": 5.969330850999995,
+    "latency": 1.2908652260000082,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://gfr.x3322.net:9901/tsfile/live/1100_1.m3u8",
+    "alive": true,
+    "method": "http-head",
+    "latency": 1.2862206799999996,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://gfr.x3322.net:9901/tsfile/live/1099_1.m3u8",
+    "alive": true,
+    "method": "http-head",
+    "latency": 1.2883315520000025,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://gfr.x3322.net:9901/tsfile/live/1085_1.m3u8",
+    "alive": true,
+    "method": "http-head",
+    "latency": 1.2947419319999938,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://gfr.x3322.net:9901/tsfile/live/1094_1.m3u8",
+    "alive": true,
+    "method": "http-head",
+    "latency": 1.2934618410000098,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://gfr.x3322.net:9901/tsfile/live/1087_1.m3u8",
+    "alive": true,
+    "method": "http-head",
+    "latency": 1.3000468820000037,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=gxws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.1083806129999942,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=gxws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=sxiws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.1432314930000018,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=sxiws: Invalid data found when processing input"
+  },
+  {
+    "url": "http://api.kkitv.itv888.cn:8080/hls/iibq0absdjr/index.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 0.3027016770000017,
+    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/iibq0absdjr/index.m3u8: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=jxws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 0.9941003800000061,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=jxws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=gzws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.1891186259999955,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=gzws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=hbws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.131327386999999,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=hbws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=hinws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.2462183410000023,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=hinws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=xjws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.174957470999999,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=xjws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=ahws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.2384197739999934,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=ahws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=hnws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.260531395000001,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=hnws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=lnws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.286513364000001,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=lnws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=hubws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.0980691449999966,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=hubws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=nmws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.2853702860000027,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=nmws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=scws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.2886342310000032,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=scws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=sdws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.2360615949999954,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=sdws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=xmws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.0900199290000074,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=xmws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=jlws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.0741728380000097,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=jlws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=zjws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 0.9646200300000061,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=zjws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=dnws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.1222258359999984,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=dnws: Invalid data found when processing input"
+  },
+  {
+    "url": "http://api.kkitv.itv888.cn:8080/hls/g1upm1u239/index.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 0.4597595769999998,
+    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/g1upm1u239/index.m3u8: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=gsws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.3629279219999972,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=gsws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=btws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.195105165000001,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=btws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=sxws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.2071881910000002,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=sxws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=dfws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.4219104180000102,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=dfws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=xzws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.4342957750000096,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=xzws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=gdws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.222822690000001,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=gdws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=ssws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.4039325130000009,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=ssws: Invalid data found when processing input"
+  },
+  {
+    "url": "http://api.kkitv.itv888.cn:8080/hls/urjqjvyf41q/index.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 0.5310763119999962,
+    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/urjqjvyf41q/index.m3u8: Server returned 404 Not Found"
+  },
+  {
+    "url": "http://api.kkitv.itv888.cn:8080/hls/qr6872071g/index.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 0.569577744,
+    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/qr6872071g/index.m3u8: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=tjws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.4393399810000034,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=tjws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=bjws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.4328889830000122,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=bjws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=ynws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.5659889359999966,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=ynws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=szws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.528922928,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=szws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=hunws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.5039393009999884,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=hunws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=qhws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.5843470869999976,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=qhws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=cqws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.4546602480000104,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=cqws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=hljws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.4788831599999952,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=hljws: Invalid data found when processing input"
+  },
+  {
+    "url": "https://iptv.catvod.com/catvod.php?id=nxws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.6509445660000068,
+    "msg": "ffprobe-rc1:https://iptv.catvod.com/catvod.php?id=nxws: Invalid data found when processing input"
+  },
+  {
+    "url": "http://api.kkitv.itv888.cn:8080/hls/m8hvytneunk/index.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 0.6737702189999908,
+    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/m8hvytneunk/index.m3u8: Server returned 404 Not Found"
+  },
+  {
+    "url": "http://api.kkitv.itv888.cn:8080/hls/yvz4ndj9dqb/index.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 0.692374903000001,
+    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/yvz4ndj9dqb/index.m3u8: Server returned 404 Not Found"
+  },
+  {
+    "url": "http://api.kkitv.itv888.cn:8080/hls/2a24lcvser/index.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 0.6094918559999911,
+    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/2a24lcvser/index.m3u8: Server returned 404 Not Found"
+  },
+  {
+    "url": "http://api.kkitv.itv888.cn:8080/hls/6gcdai13om5/index.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 0.5835471909999939,
+    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/6gcdai13om5/index.m3u8: Server returned 404 Not Found"
+  },
+  {
+    "url": "http://api.kkitv.itv888.cn:8080/hls/p269fvbehye/index.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 0.5225678079999909,
+    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/p269fvbehye/index.m3u8: Server returned 404 Not Found"
+  },
+  {
+    "url": "http://api.kkitv.itv888.cn:8080/hls/iftsd32ykm/index.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 0.6222492969999962,
+    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/iftsd32ykm/index.m3u8: Server returned 404 Not Found"
+  },
+  {
+    "url": "http://api.kkitv.itv888.cn:8080/hls/jjt15bvbl7a/index.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 0.5629852849999963,
+    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/jjt15bvbl7a/index.m3u8: Server returned 404 Not Found"
+  },
+  {
+    "url": "http://api.kkitv.itv888.cn:8080/hls/c1cajhsgba8/index.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 0.5738290419999998,
+    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/c1cajhsgba8/index.m3u8: Server returned 404 Not Found"
+  },
+  {
+    "url": "http://api.kkitv.itv888.cn:8080/hls/ogh3s6tbw6/index.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 0.5600715500000035,
+    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/ogh3s6tbw6/index.m3u8: Server returned 404 Not Found"
+  },
+  {
+    "url": "http://api.kkitv.itv888.cn:8080/hls/pv0np60bpin/index.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 0.5750388370000081,
+    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/pv0np60bpin/index.m3u8: Server returned 404 Not Found"
+  },
+  {
+    "url": "http://api.kkitv.itv888.cn:8080/hls/h5uud1z84gn/index.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 0.5732739540000011,
+    "msg": "ffprobe-rc1:http://api.kkitv.itv888.cn:8080/hls/h5uud1z84gn/index.m3u8: Server returned 404 Not Found"
+  },
+  {
+    "url": "http://www.745612.xyz:7788/rtp/235.254.198.72:1564",
+    "alive": true,
+    "method": "http-head",
+    "latency": 0.7694383910000084,
+    "msg": "HTTP GET 200"
+  },
+  {
+    "url": "http://omnix.cn:4000/udp/225.1.8.45:8032",
+    "alive": true,
+    "method": "http-head",
+    "latency": 0.5440975360000095,
+    "msg": "HTTP GET 200"
+  },
+  {
+    "url": "http://mg.hmysapp.cn:177/ckmg/zb.php?id=jxws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.231556593999997,
+    "msg": "ffprobe-rc1:http://mg.hmysapp.cn:177/ckmg/zb.php?id=jxws: Server returned 404 Not Found"
+  },
+  {
+    "url": "http://mg.hmysapp.cn:177/ckmg/zb.php?id=jsws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.1931257380000062,
+    "msg": "ffprobe-rc1:http://mg.hmysapp.cn:177/ckmg/zb.php?id=jsws: Server returned 404 Not Found"
+  },
+  {
+    "url": "http://mg.hmysapp.cn:177/ckmg/zb.php?id=dfws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.2044645539999976,
+    "msg": "ffprobe-rc1:http://mg.hmysapp.cn:177/ckmg/zb.php?id=dfws: Server returned 404 Not Found"
+  },
+  {
+    "url": "http://mg.hmysapp.cn:177/ckmg/zb.php?id=sxws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.2328003140000021,
+    "msg": "ffprobe-rc1:http://mg.hmysapp.cn:177/ckmg/zb.php?id=sxws: Server returned 404 Not Found"
+  },
+  {
+    "url": "http://mg.hmysapp.cn:177/ckmg/zb.php?id=gdws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.2615688050000102,
+    "msg": "ffprobe-rc1:http://mg.hmysapp.cn:177/ckmg/zb.php?id=gdws: Server returned 404 Not Found"
+  },
+  {
+    "url": "http://mg.hmysapp.cn:177/ckmg/zb.php?id=hubws",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.2353487830000063,
+    "msg": "ffprobe-rc1:http://mg.hmysapp.cn:177/ckmg/zb.php?id=hubws: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-海南卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.344050762000009,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-海南卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-内蒙古卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.2632645869999948,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-内蒙古卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-陕西卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.4102915210000049,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-陕西卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-山西卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.3267444139999895,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-山西卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-广西卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.430087266000001,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-广西卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-湖南卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.3698084859999966,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-湖南卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-宁夏卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.3350881509999937,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-宁夏卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-黑龙江卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.379984843999992,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-黑龙江卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-深圳卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.487751928999998,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-深圳卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-辽宁卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.3188795030000051,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-辽宁卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-兵团卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.5016747210000005,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-兵团卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-河北卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.2396061330000094,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-河北卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-山东卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.3103763560000061,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-山东卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-甘肃卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.4885125630000005,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-甘肃卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-江苏卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.3647732390000016,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-江苏卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-江西卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.2495671989999977,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-江西卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-安徽卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.4563784519999956,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-安徽卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-东方卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.536193682000004,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-东方卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-浙江卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.5996424239999953,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-浙江卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-东南卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.5068886690000056,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-东南卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-湖北卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.3110545030000083,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-湖北卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-北京卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.4368840610000007,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-北京卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-青海卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.3097357850000009,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-青海卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-天津卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.3417718019999967,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-天津卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-新疆卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.4944693629999932,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-新疆卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-吉林卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.335746274999991,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-吉林卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-云南卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.288571871000002,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-云南卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-河南卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.4395402859999962,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-河南卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-四川卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.6032961919999877,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-四川卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-重庆卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.3973799750000069,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-重庆卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-广东卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.4108012980000098,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-广东卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "https://httop.top/ysp-贵州卫视",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 1.3858966300000048,
+    "msg": "ffprobe-rc1:https://httop.top/ysp-贵州卫视: Server returned 404 Not Found"
+  },
+  {
+    "url": "http://153.0.171.163:9901/tsfile/live/0107_1.m3u8?key=txiptv&playlive=1&authid=0",
+    "alive": true,
+    "method": "http-head",
+    "latency": 3.9823391040000047,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://153.0.171.163:9901/tsfile/live/0120_1.m3u8?key=txiptv&playlive=1&authid=0",
+    "alive": true,
+    "method": "http-head",
+    "latency": 3.9838159899999965,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://153.0.171.163:9901/tsfile/live/0140_1.m3u8?key=txiptv&playlive=1&authid=0",
+    "alive": true,
+    "method": "http-head",
+    "latency": 3.9816648679999957,
     "msg": "HTTP HEAD 200"
   },
   {
     "url": "http://153.0.171.163:9901/tsfile/live/0135_1.m3u8?key=txiptv&playlive=1&authid=0",
     "alive": true,
-    "method": "ffprobe",
-    "latency": 10.097348308999983,
-    "msg": "ffprobe-ok"
+    "method": "http-head",
+    "latency": 3.995028731000005,
+    "msg": "HTTP HEAD 200"
   },
   {
-    "url": "http://iptv.huuc.edu.cn/hls/schd.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.318907007999996,
-    "msg": "ffprobe-rc1:[tcp @ 0x56274de3ff40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/schd.m3u8: Connection timed out"
-  },
-  {
-    "url": "http://iptv.huuc.edu.cn/hls/jshd.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.307024211999988,
-    "msg": "ffprobe-rc1:[tcp @ 0x564d9ff42f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/jshd.m3u8: Connection timed out"
-  },
-  {
-    "url": "http://iptv.huuc.edu.cn/hls/gedocu.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.305101710999963,
-    "msg": "ffprobe-rc1:[tcp @ 0x56550847bf40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/gedocu.m3u8: Connection timed out"
-  },
-  {
-    "url": "http://iptv.huuc.edu.cn/hls/tjhd.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.374542830999985,
-    "msg": "ffprobe-rc1:[tcp @ 0x55d3e9f08f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/tjhd.m3u8: Connection timed out"
-  },
-  {
-    "url": "http://iptv.huuc.edu.cn/hls/docuchina.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.311568313999999,
-    "msg": "ffprobe-rc1:[tcp @ 0x55eead184540] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/docuchina.m3u8: Connection timed out"
-  },
-  {
-    "url": "http://iptv.huuc.edu.cn/hls/btv1hd.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.274547487999996,
-    "msg": "ffprobe-rc1:[tcp @ 0x55cb74f2af40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/btv1hd.m3u8: Connection timed out"
-  },
-  {
-    "url": "http://iptv.huuc.edu.cn/hls/hljhd.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.265166116000046,
-    "msg": "ffprobe-rc1:[tcp @ 0x56323da3cf40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/hljhd.m3u8: Connection timed out"
-  },
-  {
-    "url": "http://iptv.huuc.edu.cn/hls/jxhd.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.228853772999969,
-    "msg": "ffprobe-rc1:[tcp @ 0x5636a835cf40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/jxhd.m3u8: Connection timed out"
-  },
-  {
-    "url": "http://iptv.huuc.edu.cn/hls/hebhd.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.247152599999993,
-    "msg": "ffprobe-rc1:[tcp @ 0x55f1afd4df40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/hebhd.m3u8: Connection timed out"
-  },
-  {
-    "url": "http://iptv.huuc.edu.cn/hls/ahhd.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.330980199999999,
-    "msg": "ffprobe-rc1:[tcp @ 0x5570fb3e5f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/ahhd.m3u8: Connection timed out"
-  },
-  {
-    "url": "http://iptv.huuc.edu.cn/hls/szhd.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.202068935,
-    "msg": "ffprobe-rc1:[tcp @ 0x55f31ebd0f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/szhd.m3u8: Connection timed out"
-  },
-  {
-    "url": "http://iptv.huuc.edu.cn/hls/cqhd.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.217535671999997,
-    "msg": "ffprobe-rc1:[tcp @ 0x55bf13106f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/cqhd.m3u8: Connection timed out"
-  },
-  {
-    "url": "http://iptv.huuc.edu.cn/hls/lnhd.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.179273283000043,
-    "msg": "ffprobe-rc1:[tcp @ 0x55b4fcd2cf40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/lnhd.m3u8: Connection timed out"
-  },
-  {
-    "url": "http://iptv.huuc.edu.cn/hls/hunanhd.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.349522114999957,
-    "msg": "ffprobe-rc1:[tcp @ 0x5599b8235540] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/hunanhd.m3u8: Connection timed out"
-  },
-  {
-    "url": "http://iptv.huuc.edu.cn/hls/dfhd.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.370890615999997,
-    "msg": "ffprobe-rc1:[tcp @ 0x55f32fd91f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/dfhd.m3u8: Connection timed out"
-  },
-  {
-    "url": "http://iptv.huuc.edu.cn/hls/zjhd.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.326683171000013,
-    "msg": "ffprobe-rc1:[tcp @ 0x55bb32b36f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/zjhd.m3u8: Connection timed out"
-  },
-  {
-    "url": "http://iptv.huuc.edu.cn/hls/sdhd.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.339157857000032,
-    "msg": "ffprobe-rc1:[tcp @ 0x5612b6072f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/sdhd.m3u8: Connection timed out"
-  },
-  {
-    "url": "http://iptv.huuc.edu.cn/hls/gdhd.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.21979470399998,
-    "msg": "ffprobe-rc1:[tcp @ 0x55be2ea9df40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/gdhd.m3u8: Connection timed out"
-  },
-  {
-    "url": "http://153.0.171.163:9901/tsfile/live/0131_1.m3u8?key=txiptv&playlive=1&authid=0",
+    "url": "http://153.0.171.163:9901/tsfile/live/0119_1.m3u8?key=txiptv&playlive=1&authid=0",
     "alive": true,
-    "method": "ffprobe",
-    "latency": 10.708902065000018,
-    "msg": "ffprobe-ok"
-  },
-  {
-    "url": "http://153.0.171.163:9901/tsfile/live/0138_1.m3u8?key=txiptv&playlive=1&authid=0",
-    "alive": true,
-    "method": "ffprobe",
-    "latency": 10.881272815999978,
-    "msg": "ffprobe-ok"
-  },
-  {
-    "url": "http://153.0.171.163:9901/tsfile/live/0140_1.m3u8?key=txiptv&playlive=1&authid=0",
-    "alive": true,
-    "method": "ffprobe",
-    "latency": 11.053521455999999,
-    "msg": "ffprobe-ok"
-  },
-  {
-    "url": "http://153.0.171.163:9901/tsfile/live/0142_1.m3u8?key=txiptv&playlive=1&authid=0",
-    "alive": true,
-    "method": "ffprobe",
-    "latency": 11.063037104999978,
-    "msg": "ffprobe-ok"
-  },
-  {
-    "url": "http://153.0.171.163:9901/tsfile/live/0117_1.m3u8?key=txiptv&playlive=1&authid=0",
-    "alive": true,
-    "method": "ffprobe",
-    "latency": 11.32364996399997,
-    "msg": "ffprobe-ok"
-  },
-  {
-    "url": "http://153.0.171.163:9901/tsfile/live/0116_1.m3u8?key=txiptv&playlive=1&authid=0",
-    "alive": true,
-    "method": "ffprobe",
-    "latency": 11.493727699999965,
-    "msg": "ffprobe-ok"
-  },
-  {
-    "url": "http://153.0.171.163:9901/tsfile/live/0118_1.m3u8?key=txiptv&playlive=1&authid=0",
-    "alive": true,
-    "method": "ffprobe",
-    "latency": 11.500562528999978,
-    "msg": "ffprobe-ok"
-  },
-  {
-    "url": "http://153.0.171.163:9901/tsfile/live/0130_1.m3u8?key=txiptv&playlive=1&authid=0",
-    "alive": true,
-    "method": "ffprobe",
-    "latency": 11.932440435999979,
-    "msg": "ffprobe-ok"
+    "method": "http-head",
+    "latency": 3.9961956450000002,
+    "msg": "HTTP HEAD 200"
   },
   {
     "url": "http://153.0.171.163:9901/tsfile/live/0122_1.m3u8?key=txiptv&playlive=1&authid=0",
     "alive": true,
-    "method": "ffprobe",
-    "latency": 11.948813241999972,
-    "msg": "ffprobe-ok"
+    "method": "http-head",
+    "latency": 3.9925017469999915,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://153.0.171.163:9901/tsfile/live/0139_1.m3u8?key=txiptv&playlive=1&authid=0",
+    "alive": true,
+    "method": "http-head",
+    "latency": 3.990176477999995,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://153.0.171.163:9901/tsfile/live/0131_1.m3u8?key=txiptv&playlive=1&authid=0",
+    "alive": true,
+    "method": "http-head",
+    "latency": 3.990512640999995,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://153.0.171.163:9901/tsfile/live/0142_1.m3u8?key=txiptv&playlive=1&authid=0",
+    "alive": true,
+    "method": "http-head",
+    "latency": 3.9993609069999962,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://153.0.171.163:9901/tsfile/live/0112_1.m3u8?key=txiptv&playlive=1&authid=0",
+    "alive": true,
+    "method": "http-head",
+    "latency": 3.998687581999988,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://153.0.171.163:9901/tsfile/live/0137_1.m3u8?key=txiptv&playlive=1&authid=0",
+    "alive": true,
+    "method": "http-head",
+    "latency": 4.002617283999996,
+    "msg": "HTTP HEAD 200"
   },
   {
     "url": "http://153.0.171.163:9901/tsfile/live/0136_1.m3u8?key=txiptv&playlive=1&authid=0",
     "alive": true,
-    "method": "ffprobe",
-    "latency": 12.274233375999984,
-    "msg": "ffprobe-ok"
+    "method": "http-head",
+    "latency": 4.004964584999996,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://153.0.171.163:9901/tsfile/live/0138_1.m3u8?key=txiptv&playlive=1&authid=0",
+    "alive": true,
+    "method": "http-head",
+    "latency": 4.00349597200001,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://153.0.171.163:9901/tsfile/live/0117_1.m3u8?key=txiptv&playlive=1&authid=0",
+    "alive": true,
+    "method": "http-head",
+    "latency": 4.006138326000013,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://153.0.171.163:9901/tsfile/live/0126_1.m3u8?key=txiptv&playlive=1&authid=0",
+    "alive": true,
+    "method": "http-head",
+    "latency": 4.013518692000005,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://153.0.171.163:9901/tsfile/live/0116_1.m3u8?key=txiptv&playlive=1&authid=0",
+    "alive": true,
+    "method": "http-head",
+    "latency": 4.011216895000004,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://153.0.171.163:9901/tsfile/live/0121_1.m3u8?key=txiptv&playlive=1&authid=0",
+    "alive": true,
+    "method": "http-head",
+    "latency": 4.0106246269999986,
+    "msg": "HTTP HEAD 200"
+  },
+  {
+    "url": "http://153.0.171.163:9901/tsfile/live/0118_1.m3u8?key=txiptv&playlive=1&authid=0",
+    "alive": true,
+    "method": "http-head",
+    "latency": 4.020802105000001,
+    "msg": "HTTP HEAD 200"
   },
   {
     "url": "http://153.0.171.163:9901/tsfile/live/0124_1.m3u8?key=txiptv&playlive=1&authid=0",
     "alive": true,
-    "method": "ffprobe",
-    "latency": 12.287158842999986,
-    "msg": "ffprobe-ok"
-  },
-  {
-    "url": "http://153.0.171.163:9901/tsfile/live/0107_1.m3u8?key=txiptv&playlive=1&authid=0",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 12.407712506999985,
-    "msg": "ffprobe-timeout"
-  },
-  {
-    "url": "http://153.0.171.163:9901/tsfile/live/0137_1.m3u8?key=txiptv&playlive=1&authid=0",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 12.368740549999984,
-    "msg": "ffprobe-timeout"
-  },
-  {
-    "url": "http://gfr.x3322.net:9901/tsfile/live/1099_1.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 12.428783642000042,
-    "msg": "ffprobe-timeout"
-  },
-  {
-    "url": "http://153.0.171.163:9901/tsfile/live/0112_1.m3u8?key=txiptv&playlive=1&authid=0",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 12.390065679000031,
-    "msg": "ffprobe-timeout"
-  },
-  {
-    "url": "http://153.0.171.163:9901/tsfile/live/0139_1.m3u8?key=txiptv&playlive=1&authid=0",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 12.320151676000023,
-    "msg": "ffprobe-timeout"
-  },
-  {
-    "url": "http://153.0.171.163:9901/tsfile/live/0126_1.m3u8?key=txiptv&playlive=1&authid=0",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 12.331295462000014,
-    "msg": "ffprobe-timeout"
-  },
-  {
-    "url": "http://153.0.171.163:9901/tsfile/live/0119_1.m3u8?key=txiptv&playlive=1&authid=0",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 12.39844218799999,
-    "msg": "ffprobe-timeout"
-  },
-  {
-    "url": "http://153.0.171.163:9901/tsfile/live/0120_1.m3u8?key=txiptv&playlive=1&authid=0",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 12.428344784999979,
-    "msg": "ffprobe-timeout"
-  },
-  {
-    "url": "http://153.0.171.163:9901/tsfile/live/0121_1.m3u8?key=txiptv&playlive=1&authid=0",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 12.38845623200001,
-    "msg": "ffprobe-timeout"
+    "method": "http-head",
+    "latency": 4.0194600659999935,
+    "msg": "HTTP HEAD 200"
   },
   {
     "url": "http://153.0.171.163:9901/tsfile/live/0132_1.m3u8?key=txiptv&playlive=1&authid=0",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 12.383193549999987,
-    "msg": "ffprobe-timeout"
+    "alive": true,
+    "method": "http-head",
+    "latency": 4.536027476000001,
+    "msg": "HTTP HEAD 200"
   },
   {
-    "url": "http://iptv.huuc.edu.cn/hls/hbhd.m3u8",
-    "alive": false,
-    "method": "ffprobe",
-    "latency": 10.061903502000007,
-    "msg": "ffprobe-rc1:[tcp @ 0x5605a8651f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/hbhd.m3u8: Connection timed out"
+    "url": "http://153.0.171.163:9901/tsfile/live/0130_1.m3u8?key=txiptv&playlive=1&authid=0",
+    "alive": true,
+    "method": "http-head",
+    "latency": 4.56754372799999,
+    "msg": "HTTP HEAD 200"
   },
   {
     "url": "http://iptv.huuc.edu.cn/hls/dnhd.m3u8",
     "alive": false,
     "method": "ffprobe",
-    "latency": 10.064950805999956,
-    "msg": "ffprobe-rc1:[tcp @ 0x55dd67de6f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/dnhd.m3u8: Connection timed out"
+    "latency": 10.167528212999997,
+    "msg": "ffprobe-rc1:[tcp @ 0x55d3ed7caf40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/dnhd.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/zjhd.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.246112061000005,
+    "msg": "ffprobe-rc1:[tcp @ 0x5645a2205f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/zjhd.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/sdhd.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.249577993000003,
+    "msg": "ffprobe-rc1:[tcp @ 0x5571b2bb7f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/sdhd.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/jxhd.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.23235141500001,
+    "msg": "ffprobe-rc1:[tcp @ 0x55f8750ddf40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/jxhd.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/lnhd.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.258763525000006,
+    "msg": "ffprobe-rc1:[tcp @ 0x55590b741f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/lnhd.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/tjhd.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.258225721999992,
+    "msg": "ffprobe-rc1:[tcp @ 0x55fe100dbf40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/tjhd.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/dfhd.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.271223663,
+    "msg": "ffprobe-rc1:[tcp @ 0x55ccb523ff40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/dfhd.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/gedocu.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.277636006000009,
+    "msg": "ffprobe-rc1:[tcp @ 0x5584fe503f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/gedocu.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/hunanhd.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.268019331999994,
+    "msg": "ffprobe-rc1:[tcp @ 0x5570bedaa540] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/hunanhd.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/ahhd.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.230915519999996,
+    "msg": "ffprobe-rc1:[tcp @ 0x563de49baf40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/ahhd.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/hljhd.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.224109509000002,
+    "msg": "ffprobe-rc1:[tcp @ 0x55bf15699f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/hljhd.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/btv1hd.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.272398107,
+    "msg": "ffprobe-rc1:[tcp @ 0x5597afc98f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/btv1hd.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/docuchina.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.200901094000002,
+    "msg": "ffprobe-rc1:[tcp @ 0x556b728bb540] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/docuchina.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/gdhd.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.282321389000003,
+    "msg": "ffprobe-rc1:[tcp @ 0x563d7546af40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/gdhd.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/cqhd.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.280168504999992,
+    "msg": "ffprobe-rc1:[tcp @ 0x55c16be70f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/cqhd.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/szhd.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.262417548999991,
+    "msg": "ffprobe-rc1:[tcp @ 0x55c1b8c39f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/szhd.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/schd.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.271418386999997,
+    "msg": "ffprobe-rc1:[tcp @ 0x555f4b4c5f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/schd.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/jshd.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.252681371000008,
+    "msg": "ffprobe-rc1:[tcp @ 0x55dd59c28f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/jshd.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/hebhd.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.244469466000012,
+    "msg": "ffprobe-rc1:[tcp @ 0x555e18a10f40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/hebhd.m3u8: Connection timed out"
+  },
+  {
+    "url": "http://iptv.huuc.edu.cn/hls/hbhd.m3u8",
+    "alive": false,
+    "method": "ffprobe",
+    "latency": 10.228146670000001,
+    "msg": "ffprobe-rc1:[tcp @ 0x5599ae0bef40] Connection to tcp://iptv.huuc.edu.cn:80 failed: Connection timed out\nhttp://iptv.huuc.edu.cn/hls/hbhd.m3u8: Connection timed out"
   }
 ]
